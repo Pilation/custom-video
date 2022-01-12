@@ -1,75 +1,102 @@
-const play = `<svg version="1.1" id="YouTube_Icon" xmlns="http://www.w3.org/2000/svg"
-xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 721"
-enable-background="new 0 0 1024 721" xml:space="preserve">
-<path id="Triangle" fill="#FFFFFF" d="M407,493l276-143L407,206V493z" />
-<path id="The_Sharpness" opacity="0.12" fill="#420000" d="M407,206l242,161.6l34-17.6L407,206z" />
-<g id="Lozenge">
-    <path fill="#000" d="M1013,156.3c0,0-10-70.4-40.6-101.4C933.6,14.2,890,14,870.1,11.6C727.1,1.3,512.7,1.3,512.7,1.3
-h-0.4c0,0-214.4,0-357.4,10.3C135,14,91.4,14.2,52.6,54.9C22,85.9,12,156.3,12,156.3S1.8,238.9,1.8,321.6v77.5
-C1.8,481.8,12,564.4,12,564.4s10,70.4,40.6,101.4c38.9,40.7,89.9,39.4,112.6,43.7c81.7,7.8,347.3,10.3,347.3,10.3
-s214.6-0.3,357.6-10.7c20-2.4,63.5-2.6,102.3-43.3c30.6-31,40.6-101.4,40.6-101.4s10.2-82.7,10.2-165.3v-77.5
-C1023.2,238.9,1013,156.3,1013,156.3z M407,493V206l276,144L407,493z" />
-</g>
+const play = `<svg width="16" height="16" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.33301 12.6666V3.33325L11.6663 7.99992L4.33301 12.6666Z" fill="white" />
 </svg>`;
-const pause = `<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="pause-circle" class="svg-inline--fa fa-pause-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="#fff" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm96-280v160c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16zm-112 0v160c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16z">
-</path>
+const pause = `<svg width="16" height="16" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 12.3333H6.66667V3H4V12.3333ZM9.33333 3V12.3333H12V3H9.33333Z" fill="white"/>
 </svg>`;
-const sound = `<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="volume-up"
-class="svg-inline--fa fa-volume-up fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 576 512">
-<path fill="#fff"
-    d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zm233.32-51.08c-11.17-7.33-26.18-4.24-33.51 6.95-7.34 11.17-4.22 26.18 6.95 33.51 66.27 43.49 105.82 116.6 105.82 195.58 0 78.98-39.55 152.09-105.82 195.58-11.17 7.32-14.29 22.34-6.95 33.5 7.04 10.71 21.93 14.56 33.51 6.95C528.27 439.58 576 351.33 576 256S528.27 72.43 448.35 19.97zM480 256c0-63.53-32.06-121.94-85.77-156.24-11.19-7.14-26.03-3.82-33.12 7.46s-3.78 26.21 7.41 33.36C408.27 165.97 432 209.11 432 256s-23.73 90.03-63.48 115.42c-11.19 7.14-14.5 22.07-7.41 33.36 6.51 10.36 21.12 15.14 33.12 7.46C447.94 377.94 480 319.54 480 256zm-141.77-76.87c-11.58-6.33-26.19-2.16-32.61 9.45-6.39 11.61-2.16 26.2 9.45 32.61C327.98 228.28 336 241.63 336 256c0 14.38-8.02 27.72-20.92 34.81-11.61 6.41-15.84 21-9.45 32.61 6.43 11.66 21.05 15.8 32.61 9.45 28.23-15.55 45.77-45 45.77-76.88s-17.54-61.32-45.78-76.86z">
-</path>
+const sound = `<svg width="16" height="16" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 5.99999V9.99999H4.66667L8 13.3333V2.66665L4.66667 5.99999H2ZM6.66667 5.88665V10.1133L5.22 8.66665H3.33333V7.33332H5.22L6.66667 5.88665ZM11 7.99999C11 6.81999 10.32 5.80665 9.33333 5.31332V10.68C10.32 10.1933 11 9.17999 11 7.99999ZM9.33333 2.15332V3.52665C11.26 4.09999 12.6667 5.88665 12.6667 7.99999C12.6667 10.1133 11.26 11.9 9.33333 12.4733V13.8467C12.0067 13.24 14 10.8533 14 7.99999C14 5.14665 12.0067 2.75999 9.33333 2.15332Z" fill="white"/>
 </svg>`;
-const mute = `<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="volume-mute" class="svg-inline--fa fa-volume-mute fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="#fff" d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zM461.64 256l45.64-45.64c6.3-6.3 6.3-16.52 0-22.82l-22.82-22.82c-6.3-6.3-16.52-6.3-22.82 0L416 210.36l-45.64-45.64c-6.3-6.3-16.52-6.3-22.82 0l-22.82 22.82c-6.3 6.3-6.3 16.52 0 22.82L370.36 256l-45.63 45.63c-6.3 6.3-6.3 16.52 0 22.82l22.82 22.82c6.3 6.3 16.52 6.3 22.82 0L416 301.64l45.64 45.64c6.3 6.3 16.52 6.3 22.82 0l22.82-22.82c6.3-6.3 6.3-16.52 0-22.82L461.64 256z">
-</path>
+const mute = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.89313 1.95679L1.95312 2.89679L4.85979 5.80345L4.66646 6.00345H1.99979V10.0035H4.66646L7.99979 13.3368V8.94345L10.7865 11.7301C10.3531 12.0568 9.86646 12.3168 9.33312 12.4701V13.8435C10.2265 13.6435 11.0465 13.2301 11.7398 12.6768L13.1065 14.0435L14.0465 13.1035L2.89313 1.95679ZM6.66646 10.1168L5.21979 8.67012H3.33312V7.33679H5.21979L5.80646 6.75012L6.66646 7.61012V10.1168ZM12.6665 8.00345C12.6665 8.55012 12.5665 9.07679 12.3931 9.56345L13.4131 10.5835C13.7865 9.80345 13.9998 8.93012 13.9998 8.00345C13.9998 5.15012 12.0065 2.76345 9.33312 2.15679V3.53012C11.2598 4.10345 12.6665 5.89012 12.6665 8.00345ZM7.99979 2.67012L6.74646 3.92345L7.99979 5.17679V2.67012ZM10.9998 8.00345C10.9998 6.82345 10.3198 5.81012 9.33312 5.31679V6.51012L10.9865 8.16345C10.9931 8.11012 10.9998 8.05679 10.9998 8.00345Z" fill="white"/>
+</svg>
+`;
+const replay = `<svg width="16" height="16" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.00033 3.99992V1.33325L4.66699 4.66659L8.00033 7.99992V5.33325C10.207 5.33325 12.0003 7.12659 12.0003 9.33325C12.0003 11.5399 10.207 13.3333 8.00033 13.3333C5.79366 13.3333 4.00033 11.5399 4.00033 9.33325H2.66699C2.66699 12.2799 5.05366 14.6666 8.00033 14.6666C10.947 14.6666 13.3337 12.2799 13.3337 9.33325C13.3337 6.38659 10.947 3.99992 8.00033 3.99992Z" fill="white"/>
 </svg>`;
 
+const StartButton = document.querySelector(`.start-button`);
+const poster = document.querySelector(`.video-player__poster`)
 const playButton = document.querySelector('.play-button');
 const video = document.getElementById('video');
 const timeline = document.querySelector('.timeline');
 const soundButton = document.querySelector('.sound-button');
 const fullscreenButton = document.querySelector('.fullscreen-button');
-const videoContainer = document.querySelector('.video-player');
+const videoContainer = document.querySelector('.video-player__elements');
 let isFullScreen = false;
 
-playButton.addEventListener('click', function () {
+
+const Blink = (button) => {
+    StartButton.innerHTML = button;
+    StartButton.classList.add(`blink`);
+    StartButton.style.zIndex = 2;
+    setTimeout(() => {
+        StartButton.classList.remove(`blink`)
+        StartButton.style.zIndex = 0;
+        StartButton.innerHTML = play;
+    }, 200);
+}
+
+const VideoPlayScript = () => {
+    video.play();
+    videoContainer.classList.add('playing');
+    playButton.innerHTML = pause;
+    Blink(play);
+}
+const VideoPauseScript = () => {
+    video.pause();
+    videoContainer.classList.remove('playing');
+    playButton.innerHTML = play;
+    Blink(pause);
+}
+
+const VideoClickPause = (event) => {
     if (video.paused) {
-        video.play();
-        videoContainer.classList.add('playing');
-        document.querySelector(`.play-button`).classList.add('playing');
-        playButton.innerHTML = pause;
+        VideoPlayScript();
     } else {
-        video.pause();
-        videoContainer.classList.remove('playing');
-        document.querySelector(`.play-button`).classList.remove('playing');
-        playButton.innerHTML = play;
+        VideoPauseScript();
+    }
+    event.stopPropagation();
+}
+
+StartButton.addEventListener(`click`, () => {
+    StartButton.classList.add(`hidden`);
+    poster.classList.add(`hidden`);
+    videoContainer.classList.remove(`postered`);
+    VideoPlayScript();
+})
+
+document.querySelector(`#video`).addEventListener(`click`, VideoClickPause)
+
+playButton.addEventListener('click', () => {
+    if (video.paused) {
+        VideoPlayScript();
+    } else {
+        VideoPauseScript();
     }
 })
 
-video.onended = function () {
-    playButton.innerHTML = play;
+video.onended = () => {
+    playButton.innerHTML = replay;
 }
 
-video.ontimeupdate = function () {
+video.ontimeupdate = () => {
     const percentagePosition = (100 * video.currentTime) / video.duration;
     timeline.style.backgroundSize = `${percentagePosition}% 100%`;
     timeline.value = percentagePosition;
 }
 
-timeline.addEventListener('change', function () {
+timeline.addEventListener('change', () => {
     const time = (timeline.value * video.duration) / 100;
     video.currentTime = time;
 });
 
-soundButton.addEventListener('click', function () {
+soundButton.addEventListener('click', () => {
     video.muted = !video.muted;
     soundButton.innerHTML = video.muted ? mute : sound;
 });
 
-fullscreenButton.addEventListener('click', function () {
+fullscreenButton.addEventListener('click', () => {
     if (!isFullScreen) {
         if (video.requestFullscreen) {
             video.requestFullscreen();
@@ -78,6 +105,7 @@ fullscreenButton.addEventListener('click', function () {
         } else if (video.msRequestFullscreen) { /* IE11 */
             video.msRequestFullscreen();
         }
+        document.querySelector(`#video`).removeEventListener(`click`, VideoClickPause)
     } else {
         if (document.exitFullscreen) {
             document.exitFullscreen();
@@ -86,5 +114,6 @@ fullscreenButton.addEventListener('click', function () {
         } else if (document.msExitFullscreen) { /* IE11 */
             document.msExitFullscreen();
         }
+        document.querySelector(`#video`).addEventListener(`click`, VideoClickPause)
     }
 });
