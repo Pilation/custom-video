@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <div class="video-player">
-            <img src="./poster.png" alt="img" class="video-player__poster">
+            <img data-src="./poster.png" alt="img" class="video-player__poster lazy">
             <button class="start-button">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.33301 12.6666V3.33325L11.6663 7.99992L4.33301 12.6666Z" fill="white" />
@@ -20,7 +20,7 @@
             </button>
             <div class="video-player__elements postered">
                 <video id="video">
-                    <source src="./Lumimo.mp4" type="video/mp4" />
+                    <data-src src="./Lumimo.mp4" type="video/mp4"></data-src>
                 </video>
                 <div class="controls">
                     <button class="play-button control-button">
@@ -47,8 +47,10 @@
             </div>
         </div>
     </div>
-
-    <script src="js/script.js"></script>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/jquery.lazy.min.js"></script>
+    <script src="./js/jquery.lazy.av.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

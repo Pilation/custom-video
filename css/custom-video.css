@@ -260,3 +260,8 @@
   border: none;
   background: transparent;
 }
+
+#video-two {
+  width: 500px;
+  height: 200px;
+}

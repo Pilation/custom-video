@@ -1,3 +1,10 @@
+$(function () {
+    $("video").lazy();
+});
+$(function () {
+    $('.lazy').Lazy();
+});
+
 const play = `<svg width="16" height="16" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.33301 12.6666V3.33325L11.6663 7.99992L4.33301 12.6666Z" fill="white" />
 </svg>`;
@@ -59,6 +66,7 @@ const VideoClickPause = (event) => {
     event.stopPropagation();
 }
 
+
 StartButton.addEventListener(`click`, () => {
     StartButton.classList.add(`hidden`);
     poster.classList.add(`hidden`);
@@ -66,7 +74,7 @@ StartButton.addEventListener(`click`, () => {
     VideoPlayScript();
 })
 
-document.querySelector(`#video`).addEventListener(`click`, VideoClickPause)
+video.addEventListener(`click`, VideoClickPause)
 
 playButton.addEventListener('click', () => {
     if (video.paused) {
@@ -97,23 +105,21 @@ soundButton.addEventListener('click', () => {
 });
 
 fullscreenButton.addEventListener('click', () => {
-    if (!isFullScreen) {
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
-        } else if (video.webkitRequestFullscreen) { /* Safari */
-            video.webkitRequestFullscreen();
-        } else if (video.msRequestFullscreen) { /* IE11 */
-            video.msRequestFullscreen();
-        }
-        document.querySelector(`#video`).removeEventListener(`click`, VideoClickPause)
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) { /* Safari */
+        video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { /* IE11 */
+        video.msRequestFullscreen();
+    }
+});
+
+$('#video').on('fullscreenchange webkitfullscreenchange mozfullscreenchange', function () {
+    if (document.fullscreenElement) {
+        video.removeEventListener(`click`, VideoClickPause)
+        video.setAttribute("controls", "controls");
     } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) { /* Safari */
-            document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) { /* IE11 */
-            document.msExitFullscreen();
-        }
-        document.querySelector(`#video`).addEventListener(`click`, VideoClickPause)
+        video.addEventListener(`click`, VideoClickPause)
+        video.removeAttribute("controls");
     }
 });
